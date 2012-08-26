@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120826153537) do
+ActiveRecord::Schema.define(:version => 20120826153945) do
 
   create_table "answers", :force => true do |t|
     t.integer  "list_item_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120826153537) do
     t.integer  "list_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "answer_kind"
   end
 
   add_index "list_items", ["list_id"], :name => "index_list_items_on_list_id"
