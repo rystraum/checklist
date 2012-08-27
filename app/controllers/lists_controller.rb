@@ -30,6 +30,13 @@ class ListsController < ApplicationController
     redirect_to lists_path if @list.destroy
   end
 
+  def report
+    @report = @list.reports.build inspector: current_inspector
+    for list_item in @list.list_items
+      @report.answers.build list_item_id: list_item.id
+    end
+  end
+
   protected
     def get_list
       @list = List.includes(:list_items).find params[:id]

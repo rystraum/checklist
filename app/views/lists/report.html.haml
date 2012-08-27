@@ -1,4 +1,5 @@
 = render "details"
-- for item in @list.list_items
-  = render "list_items/report_item", list_item: item
+= form_for @report do |f|
+  = f.fields_for :answers do |b|
+    = render "answers/answer_fields", f: b
 

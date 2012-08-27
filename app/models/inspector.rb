@@ -8,6 +8,7 @@ class Inspector < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
-  has_many :answers
+  has_many :reports
+  has_many :answers, through: :reports
 end
 
