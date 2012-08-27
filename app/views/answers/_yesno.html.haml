@@ -1,8 +1,8 @@
 %label
-  = radio_button_tag "answer[value]", "yes", @answer.value == "yes"
+  = f.radio_button "value", "yes"
   Yes
 
 %label
-  = radio_button_tag "answer[value]", "no", @answer.value == "no"
+  = f.radio_button "value", "no"
   No
 

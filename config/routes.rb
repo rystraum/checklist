@@ -9,6 +9,8 @@ Checklist::Application.routes.draw do
     end
   end
 
+  resources :reports, only: :create
+
   root to: "home#index"
 end
 

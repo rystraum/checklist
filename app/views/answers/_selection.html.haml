@@ -1,5 +1,5 @@
 - for selection in @answer.list_item.selection
   %label
-    = radio_button_tag "answer[value]", "selection", @answer.value == selection
+    = f.radio_button "value", selection
     = selection
 
