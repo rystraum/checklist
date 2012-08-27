@@ -1,9 +1,4 @@
-%p
-  %b Name:
-  = @list.name
-%p
-  %b Description:
-  = @list.description
+= render "details"
 
 = link_to 'Edit', edit_list_path(@list)
 \|

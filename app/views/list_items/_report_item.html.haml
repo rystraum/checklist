@@ -1,0 +1,6 @@
+.title= list_item.title
+.description= list_item.description
+.answers
+  - @answer = Answer.new inspector_id: current_inspector.id, list_item_id: list_item.id
+  = render @answer
+

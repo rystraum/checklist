@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
   before_filter :authenticate_inspector!
   before_filter :get_lists, only: [:index]
-  before_filter :get_list, only: [:show, :edit, :update, :destroy]
+  before_filter :get_list, only: [:show, :edit, :update, :destroy, :report]
   respond_to :html, :json
 
   def index
@@ -32,7 +32,7 @@ class ListsController < ApplicationController
 
   protected
     def get_list
-      @list = List.find params[:id]
+      @list = List.includes(:list_items).find params[:id]
     end
 
     def get_lists
