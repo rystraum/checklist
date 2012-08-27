@@ -38,7 +38,7 @@ class DeviseCreateInspectors < ActiveRecord::Migration
     end
 
     add_index :inspectors, :email,                :unique => true
-    add_index :inspectors, :reset_password_token, :unique => true
+    # add_index :inspectors, :reset_password_token, :unique => true
     # add_index :inspectors, :confirmation_token,   :unique => true
     # add_index :inspectors, :unlock_token,         :unique => true
     # add_index :inspectors, :authentication_token, :unique => true
